@@ -1,0 +1,16 @@
+# app/config/config.yml
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+        sonata.user.block.menu: ~
+        sonata.user.block.account: ~
+
+sonata_user:
+    security_acl: true
+    manager_type: orm # can be orm or mongodb
+    class:
+        user: AppBundle\Entity\User
+        group: AppBundle\Entity\Group
+
